@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "abb6626e-6493-41eb-a085-7fe28d35facd",
+		"name": "room-reservation-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startDate\": \"2022-02-02 23:00:00\",\r\n    \"timeSpan\": 5.6,\r\n    \"attendeesNumber\": 200,\r\n    \"hasMultimedia\": true,\r\n    \"roomCode\": \"R003\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/reservation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all reservations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/room?buildingCode=B001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"room"
+					],
+					"query": [
+						{
+							"key": "buildingCode",
+							"value": "B001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all rooms available",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/reservation?date=2022-02-02",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"reservation"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2022-02-02"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

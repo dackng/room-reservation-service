@@ -1,0 +1,9 @@
+[
+  {
+    "code": "R003",
+    "name": "ROOM 3",
+    "maximumAllocation": 200,
+    "hasMultimedia": true,
+    "cleanUpTime": 205
+  }
+]
